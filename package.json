@@ -15,5 +15,8 @@
     "url": "https://github.com/stphnrosa/SBA318/issues"
   },
   "homepage": "https://github.com/stphnrosa/SBA318#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
