@@ -1,0 +1,19 @@
+{
+  "name": "sba-318",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stphnrosa/SBA318.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stphnrosa/SBA318/issues"
+  },
+  "homepage": "https://github.com/stphnrosa/SBA318#readme",
+  "description": ""
+}
