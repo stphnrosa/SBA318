@@ -4,11 +4,11 @@ const PORT = 3000;
 
 app.get('/', (req,res) => {
   res.send('The "home" route of my express server')
-})
+});
 
 app.get('/home', (req,res) => {
   res.send('<h1> Hello World </h1>')
-})
+});
 
 app.get('/list', (req,res) => {
   res.send(`
@@ -19,11 +19,11 @@ app.get('/list', (req,res) => {
       </ul>
     `);
     //
-})
+});
 
 app.get('/go-home',(req,res) => {
   res.redirect('/home');
-})
+});
 
 app.get('/json', (req,res) => {
   res.json({
@@ -32,7 +32,18 @@ app.get('/json', (req,res) => {
        enrolled:true,
        course: 'NodeJS and Express'
   })
+});
+
+app.get('/user/:id', (req,res) => {
+  // console.log(req.params)
+  res.send(`The ID of this user is ${req.params.id}`)
 })
+
+app.get('/name/:firstName', (req,res) => {
+  console.log('Params: ', req.params)
+  console.log('Queries', req.query)
+  res.send(`My name is ${req.params.firstName} ${req.query.lastName}`)
+});
 
 
 app.listen(PORT, () => {
