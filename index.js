@@ -1,9 +1,7 @@
-const http = require("http");
+const express = require("express")
+const app = express();
+const port = 3000;
 
-http
-.createServer((req,res)=>{
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/html");
-    res.write("");
-    res.end()
-});
+app.get('/', () => {
+  
+})
