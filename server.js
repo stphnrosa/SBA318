@@ -5,6 +5,7 @@
 
 
 const express = require("express");
+const expressLayouts = require('express-ejs-layouts')
 const app = express();
 const PORT = 3000;
 
@@ -19,6 +20,7 @@ app.use('/css', express.static(__dirname + 'public/css'))
 ////////////////////////////////////////////
 ///////////// TEMPLATE ENGINE /////////////
 //////////////////////////////////////////
+app.use(expressLayouts)
 app.set('view engine', 'ejs'); // installed this by typing npm install ejs in terminal
 app.set('views', './views');
 
