@@ -1,12 +1,15 @@
 //reference for error handling middleware:https://medium.com/@arunchaitanya/understanding-normal-middleware-and-error-handling-middleware-in-express-js-d3ecbd9b9849 , https://expressjs.com/en/guide/error-handling.html
 //reference for template: https://www.npmjs.com/package/ejs
-
+//reference: https://www.youtube.com/watch?v=lYVKbAn5Od0
 //reference:http://w3schools.com/nodejs/nodejs_filesystem.asp
 
 
 const express = require("express");
 const app = express();
 const PORT = 3000;
+
+app.set('view engine', 'ejs'); // installed this by typing npm install ejs in terminal
+app.set('views', './views');
 
 // serve static files from the styles dictionary 
 app.use(express.static(".styles"));
