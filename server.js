@@ -8,11 +8,19 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
+
+////////////////////////////////////////////////////
+// serve static files from the styles dictionary //
+///////////////////////////////////////////////////
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + 'public/css'))
+
+
+////////////////////////////////////////////
+///////////// TEMPLATE ENGINE /////////////
+//////////////////////////////////////////
 app.set('view engine', 'ejs'); // installed this by typing npm install ejs in terminal
 app.set('views', './views');
-
-// serve static files from the styles dictionary 
-app.use(express.static(".styles"));
 
 const fs = require("fs"); // lets you read/create/update/delete/rename files
 
