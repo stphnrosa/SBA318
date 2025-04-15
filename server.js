@@ -56,11 +56,15 @@ app.get("/home", (req, res) => {
   res.render('home', { title: 'Home' });
 });
 
-app.get('/about', (req, res) => {
+app.get("/quiz", (req, res) => {
+  res.render('quiz', { title: 'Skincare Quiz' });
+});
+
+app.get("/about", (req, res) => {
   res.render('about', {
     title: 'About',
-    items: ['Item 1', 'Item 2', 'Item 3']
-  });
+    items:['Item 1','Item 2']
+   });
 });
 
 app.get("/go-home", (req, res) => {
@@ -70,6 +74,14 @@ app.get("/go-home", (req, res) => {
 app.get("/posts", (req, res) => {
   res.render('posts', { title: 'posts' });
 });
+
+app.post('/', (req, res) => {
+  res.send('Got a POST request')
+})
+
+app.delete('/user', (req, res) => {
+  res.send('Got a DELETE request at /user')
+})
 
 app.get("/json", (req, res) => {
   res.json({
