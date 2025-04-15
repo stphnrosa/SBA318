@@ -3,6 +3,8 @@
 //reference: https://www.youtube.com/watch?v=lYVKbAn5Od0
 //reference:http://w3schools.com/nodejs/nodejs_filesystem.asp
 
+// çhttps://blog.postman.com/how-to-create-a-rest-api-with-node-js-and-express/
+
 
 const express = require("express");
 const expressLayouts = require('express-ejs-layouts');
@@ -50,6 +52,10 @@ app.get("/", (req, res) => {
   res.render('home', { title: 'Home' });
 });
 
+app.get("/home", (req, res) => {
+  res.render('home', { title: 'Home' });
+});
+
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About',
@@ -58,7 +64,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get("/go-home", (req, res) => {
-  res.redirect("/home");
+  res.redirect("/");
 });
 
 app.get("/posts", (req, res) => {
